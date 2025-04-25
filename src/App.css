@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.welcome-section {
+  background: url('../public/assets/indexbg.jpg') no-repeat center center/cover;
+  position: relative;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.4); /* optional: darkens for contrast */
+  z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.welcome-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.enquiry-wrapper {
+  max-width: 500px;
+  width: 100%;
+}
+
+.card {
+  z-index: 2;
+}
+.text-justify {
+  text-align: justify;
+  font-size: large;
+}
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .welcome-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .enquiry-wrapper {
+    max-width: 100%;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .welcome-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .welcome-section p {
+    font-size: 0.95rem;
   }
 }
